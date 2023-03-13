@@ -1,0 +1,3 @@
+public enum TripSource {
+    NANJING, BEIJING, SHANGHAI, OULU, HELSINKI,PARIS
+}

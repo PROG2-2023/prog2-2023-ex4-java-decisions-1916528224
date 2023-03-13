@@ -5,6 +5,10 @@ package prog2.exercise4.flight.booking.system;
  *
  */
 import java.util.Scanner;
+
+import prog2.exercise4.flight.booking.system.FlightBooking.TripDestination;
+import prog2.exercise4.flight.booking.system.FlightBooking.TripSource;
+
 import java.time.LocalDate;
 
 public class Main 
@@ -29,7 +33,7 @@ public class Main
     System.out.println("Please choose your trip source: 1.Nanjing 2.Beijing 3.Oulu 4.Helsinki");
     int j = input.nextInt();
     System.out.println("Please choose your trip destination:1.Nanjing 2. Beijing 3.Oulu 4.Helsinki");
-    int q = input,nextInt();
+    int q = input.nextInt();
 
 
     FlightBooking fb = new FlightBooking("null", depart, returnDate, 2, 3);
@@ -42,14 +46,18 @@ public class Main
     fb.setTotalPassengers(AdultPassengers , ChildrenPassengers);
     int totalPassengers = fb.getTotalPassengers();
      
-
+     fb.setTripType(d);
+     fb.setBookingClass(u);
+     fb.setTripDestination(q);
+ 
     String ticketNumber = fb.getTicketNumber();
     double TotalTicketPrice = fb.getTotalTicketPrice();
     double returnTicketPrice = fb.getreturnTicketPrice();
-    double departingTicketPrice = fb.getdepartingTicketPrice();
-    String TripDestination = fb.gettripDestination();
+    double departingTicketPrice = fb.getTotalTicketPrice();
+    String TripDestination = fb.gettripDestination().toString();
     String sourceAirport = fb.getsourceAirport();
-    String TripSource = fb.getTripSource();
+    String tripSource=fb.getTripSource().toString();
+    System.out.println(tripSource);
     String FlightCompany = fb.getFlightCompany();
      
      
