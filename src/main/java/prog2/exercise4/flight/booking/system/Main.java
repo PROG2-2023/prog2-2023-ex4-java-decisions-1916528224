@@ -46,9 +46,7 @@ public class Main
     fb.setTotalPassengers(AdultPassengers , ChildrenPassengers);
     int totalPassengers = fb.getTotalPassengers();
      
-     fb.setTripType(d);
-     fb.setBookingClass(u);
-     fb.setTripDestination(q);
+   
  
     String ticketNumber = fb.getTicketNumber();
     double TotalTicketPrice = fb.getTotalTicketPrice();
